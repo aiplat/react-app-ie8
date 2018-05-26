@@ -7,15 +7,16 @@
 
 ---
 
-# 代码目录结构--与vueapp类似(https://github.com/womendi/vueapp)
+# 代码目录结构--
+### 习惯vue后，改为与vueapp类似(https://github.com/womendi/vueapp)
 
  - build           ------webpack配置目录
  - config          ------webpack打包配置目录
  - dist            ------npm run build后实际布署代码目录
  - src             ------代码主体目录
  - --- api         ------静态json目录
- - --- assets      ------静态css、img、less文件目录
- - --- components  ------react公共组件目录
+ - --- assets      ------静态css、images、less文件目录
+ - --- components  ------公共组件目录
  - --- plugins     ------公共函数或插件目录
  - --- redux       ------redux，store目录
  - --- routes      ------路由配置目录
