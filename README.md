@@ -11,6 +11,7 @@
 
  - build           ------webpack配置目录
  - config          ------webpack打包配置目录
+ - dist            ------npm run build后实际布署代码目录
  - src             ------代码主体目录
  - --- api         ------静态json目录
  - --- assets      ------静态css、img、less文件目录
