@@ -54,14 +54,16 @@
 
 ---
 
-#命令替换
+# 命令替换
 
-## 可用cnpm代替npm
+### 可用cnpm代替npm
  - $ npm install -g cnpm --registry=https://registry.npm.taobao.org
  - 然后所有npm * 可用 cnpm *代替 
+ - 例如 cnpm install 、cnpm install -g ** 、cnpm install --save-dev **
 
-## 可用yarn代替npm
+### 可用yarn代替npm
  - 然后所有npm * 可用 yarn具体代码代替 
+  - 例如 yarn或yarn install 、yarn add **、 yarn add ** --dev
 
 ---
 
