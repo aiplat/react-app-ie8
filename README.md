@@ -13,8 +13,9 @@
  - build           ------webpack配置目录
  - config          ------webpack打包配置目录
  - dist            ------npm run build后实际布署代码目录
+ - mock            ------虚拟mock目录
+ - --- api         ------静态json目录，请求地址'/api/a.json'会请到/mock/api/a.json
  - src             ------代码主体目录
- - --- api         ------静态json目录
  - --- assets      ------静态css、images、less文件目录
  - --- components  ------公共组件目录
  - --- plugins     ------公共函数或插件目录
@@ -31,9 +32,7 @@
 
 # 安装依赖
  - $ cd react-app-ie8
- - $ npm install -g cnpm --registry=https://registry.npm.taobao.org
- - $ cnpm install
- - 或者cd之后直接$  npm  install
+ - $ npm install
 
 # 开发模式(两种)
 
@@ -52,6 +51,19 @@
  - $ npm run build
  - 整个项目代码打包到dist目录，打开其中index.html就是项目 首页
  - 布署到服务器，直接将dist目录中文件放在服务器根目录
+
+---
+
+#命令替换
+
+## 可用cnpm代替npm
+ - $ npm install -g cnpm --registry=https://registry.npm.taobao.org
+ - 然后所有npm * 可用 cnpm *代替 
+
+## 可用yarn代替npm
+ - 然后所有npm * 可用 yarn具体代码代替 
+
+---
 
 # 兼容性
  - PC端兼容IE8及以上
