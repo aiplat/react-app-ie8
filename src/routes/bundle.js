@@ -43,4 +43,14 @@ Bundle.propTypes = {
   children: PropTypes.func
 };
 
-export default Bundle;
+
+import Loading from 'components/loading';
+const BundleComponent = (component) => (props) => (
+    <Bundle load={component}>
+        {
+            (Component) => Component ? <Component {...props} /> : <Loading />
+        }
+    </Bundle>
+);
+
+export default BundleComponent;

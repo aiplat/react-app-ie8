@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import { connect } from 'react-redux';
 import { getSiteInfo } from 'actions/siteinfo'
 
@@ -10,7 +10,7 @@ class Index extends Component {
         super(props);
         this.state = {
             win: window.cm.updateAni(1, 'cm_Wr2l04'),
-            icon: window.Mconf.logo,
+            icon: window.site.logo,
             indexData: {
                 description: 'AI智能空间,拥抱人工智能,明天会更好。个人项目:跨平台app~《亲信地铁》、小程序~《娱乐计分器》。技术研究潜心使用各种框架开发h5app:同时兼容wap、web、微信浏览器、微信小程序、android和ios,六个平台界面统一,功能一致。详见应用展示。',
                 gitName: '我的github',
@@ -71,7 +71,6 @@ class Index extends Component {
     render() {
         const m = this.props.match
         const Hdata = { title: m.url, imgL: require('assets/images/commons/cm_back2.png'), imgR: '' }
-        document.title = window.Mconf.name + '-' + Hdata.title;
         return (
             <div className={this.state.win.ani}>
                 <Header Hdata={Hdata}
@@ -91,7 +90,9 @@ class Index extends Component {
                         </li>
                         <li className="cm_pc_12 cm_prl05">
                             <div className="cm_pc_12">
-                                <div className="cm_fl cm_prl05 cm_be cm_hl2 cm_mtb05 cm_br02">{this.state.indexData.gitName}</div>
+                                <Link className="cm_fl cm_prl05 cm_be cm_hl2 cm_mtb05 cm_br02"
+                                    to="/test/123"
+                                >{this.state.indexData.gitName}</Link>
                                 <div className="cm_pa cm_tr0 cm_hl3 cm_mr05"><a href={this.state.indexData.gitUrl2}
                                     target="_blank"
                                                                              >{this.state.indexData.gitUrl}</a></div>
@@ -113,9 +114,11 @@ class Index extends Component {
                         <li className="cm_pc_12 cm_prl05 cm_tc">
                             <div className="cm_pc_12 cm_bb1ce">
                                 <div className="cm_fl cm_prl05 cm_be cm_hl2 cm_mtb05 cm_br02">{this.state.indexData.cooperation}</div>
-                                <div className="cm_pa cm_tr0 cm_hl3 cm_mr05"><a href={this.toEmail()}
-                                    target="_blank"
-                                                                             >{this.state.indexData.email}</a></div>
+                                <div className="cm_pa cm_tr0 cm_hl3 cm_mr05">
+                                    <a href={this.toEmail()}
+                                        target="_blank"
+                                    >{this.state.indexData.email}</a>
+                                </div>
                             </div>
                         </li>
                     </ul>

@@ -1,7 +1,7 @@
 /*
     修 改 人：aiplat.com
     最近修改：2018.05.17
-    修改描述：
+    修改描述：url
 */
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -22,7 +22,7 @@ const baseConfig = {
         path: path.join(__dirname, dir + 'dist'),
         filename: 'js/[name].[chunkhash].js',
         chunkFilename: 'js/[name].[chunkhash].js',
-        publicPath: ''
+        publicPath: '/'
     },
     module: {
         postLoaders: [

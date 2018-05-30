@@ -34,9 +34,7 @@ class Index extends Component {
         });
     }
     render() {
-        var p = this.props.location.pathname;
         const Hdata = { title: '捐赠我们', imgL: '', imgR: '' }
-        document.title = window.Mconf.name + '-' + Hdata.title;
         return (
             <div className={this.state.win.ani}>
                 <Header Hdata={Hdata} />
@@ -79,7 +77,7 @@ class Index extends Component {
                     </ul>
                 </div>
                 <Beian />
-                <Footer path={p} />
+                <Footer path={this.props.location.pathname} />
             </div>
         );
     }

@@ -10,7 +10,7 @@ const cm = require('../src/plugins/cmnode')
 var proxy = {
     // 请求到 '/api' 下 的请求都会被代理到 target： http://www.aiplat.com 中
     '/api/*': {
-        target: 'http://localhost:2018',
+        target: 'http://www.aiplat.com',
         secure: false,
         changeOrigin: true
     }

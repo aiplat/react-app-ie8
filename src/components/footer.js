@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class Index extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
     }
     render() {
         const Len = 'cm_pc_' + this.props.MenuList.length + 'f'

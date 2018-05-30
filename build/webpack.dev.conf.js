@@ -1,7 +1,7 @@
 /*
     修 改 人：aiplat.com
     最近修改：2018.05.17
-    修改描述：
+    修改描述：新增less、devServer设置
 */
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf.js')

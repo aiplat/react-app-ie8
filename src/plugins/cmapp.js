@@ -86,7 +86,7 @@ cm.nowTime = function (tp, nd, f) {
     return t;
 }
 cm.cl = function (txt) {
-    if (typeof txt == 'object' || typeof txt == 'object Object') {
+    if (typeof txt == 'object' || typeof txt == '[object object]') {
         txt = JSON.stringify(txt);
     }
     console.log('time:' + cm.nowTime(1, 0, 1) + '-->' + txt);

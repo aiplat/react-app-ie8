@@ -1,49 +1,30 @@
-import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-
 import Bundle from './bundle';
-import Loading from 'components/loading';
-const createComponent = (component) => (props) => (
-    <Bundle load={component}>
-        {
-            (Component) => Component ? <Component {...props} /> : <Loading />
-        }
-    </Bundle>
-);
 
-//全局site配置
-window.Mconf = { name: 'react-app-ie8', logo: require('assets/images/icon.png'), description: 'react+redux+react-router+cmui+html5+css3+less+es6+webpack+兼容IE8,适合开发各种webapp、企业网站、后台管理系统等等任何系统', site: 'aiplat.com', url: 'http://aiplat.com' };
-window.cm = require('plugins/cmapp');
-
+import NotFound from 'bundle-loader?lazy&name=notFound!views/common/notFound';
 import Index from 'bundle-loader?lazy&name=index!views/index/index';
 import Apps from 'bundle-loader?lazy&name=apps!views/apps/index';
 import Donate from 'bundle-loader?lazy&name=donate!views/donate/index';
 import Test from 'bundle-loader?lazy&name=test!views/test/index';
-import NotFound from 'bundle-loader?lazy&name=notFound!views/common/notFound';
-export default () => (
-    <Switch>
-        <Route component={createComponent(Index)}
-            exact
-            path="/"
-        />
-        <Route path="/index"
-            render={() => <Redirect to="/" />}
-        />
-        <Route path="/index.htm"
-            render={() => <Redirect to="/" />}
-        />
-        <Redirect from="/index.html"
-            to="/"
-        />
-        <Route component={createComponent(Apps)}
-            path="/apps.html"
-        />
-        <Route component={createComponent(Donate)}
-            path="/donate.html"
-        />
-        <Route component={createComponent(Test)}
-            path="/test"
-        />
-        <Route component={createComponent(NotFound)}/>
-    </Switch>
-);
+import Test2 from 'bundle-loader?lazy&name=test!views/test/test2';
+
+var Routes = {}
+//主路由
+Routes.router = [
+    {path:'/',exact:true,component:Bundle(Index)},
+    {path:'/404',component:Bundle(NotFound)},
+    {path:'/apps.html',component:Bundle(Apps)},
+    {path:'/donate.html',component:Bundle(Donate)},
+    {path:'/test',exact:true,component:Bundle(Test)},
+    {path:'/test/:id',component:Bundle(Test2)}
+]
+//重定向路由
+Routes.redirect = [
+    {path:'/index',redirect:true,to:'/'},
+    {path:'/index.htm',redirect:true,to:'/'},
+    {path:'/index.html',redirect:true,to:'/'},
+    {path:'/test2',redirect:true,to:'/test'},
+    /* * 404必须最后*/
+    {path:'*',redirect:true,to:'/404'}
+]
+
+export default Routes
