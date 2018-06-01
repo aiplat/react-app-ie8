@@ -11,3 +11,5 @@
 
 ## aiplat.js是当前项目aiplat所有的路由
  - 因为这已经是适配pc和mobile，所有只有一个aiplat.js
+
+## authRoute.js是登录控制路由
