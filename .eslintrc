@@ -90,7 +90,7 @@
         "react/jsx-max-props-per-line": [
             1,
             {
-                "maximum": 1
+                "maximum": 2
             }
         ],
         "react/jsx-no-bind": 0,

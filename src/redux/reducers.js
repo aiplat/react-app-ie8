@@ -1,9 +1,11 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
-import donate from 'reducers/donate';
-import siteinfo from 'reducers/siteinfo';
+import login from 'reducers/login'
+import donate from 'reducers/donate'
+import siteinfo from 'reducers/siteinfo'
 
 export default combineReducers({
+    login,
     donate,
     siteinfo
-});
+})

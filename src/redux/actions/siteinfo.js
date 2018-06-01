@@ -1,6 +1,6 @@
-export const GET_INFO_REQUEST = 'siteinfo/GET_INFO_REQUEST';
-export const GET_INFO_SUCCESS = 'siteinfo/GET_INFO_SUCCESS';
-export const GET_INFO_FAIL = 'siteinfo/GET_INFO_FAIL';
+export const GET_INFO_REQUEST = 'siteinfo/GET_INFO_REQUEST'
+export const GET_INFO_SUCCESS = 'siteinfo/GET_INFO_SUCCESS'
+export const GET_INFO_FAIL = 'siteinfo/GET_INFO_FAIL'
 
 export function getSiteInfo() {
     return {

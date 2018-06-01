@@ -85,6 +85,11 @@ cm.nowTime = function (tp, nd, f) {
     }
     return t;
 }
+window.console = window.console || (function () {
+    var c ={};
+　　 c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile= c.clear = c.exception = c.trace = c.assert = function(){};
+    return c;
+})();
 cm.cl = function (txt) {
     if (typeof txt == 'object' || typeof txt == '[object object]') {
         txt = JSON.stringify(txt);
@@ -376,19 +381,19 @@ cm.updateAni = (path, type) => {
 }
 cm.toBackAni = (t, type) => {
     if (type == 'noAni') {
-        window.history.go(-1);
+        window.rHistory.goBack()
         return;
     }
     t.setState({
         win: cm.updateAni(1, type ? type : 'cm_Wl2r03')
     });
     setTimeout(function () {
-        window.history.go(-1);
+        window.rHistory.goBack()
     }, 288)
 }
 cm.ckBackAni = (t) => {
     if (t.props.Hdata.bktype == 1) {
-        window.history.go(-1);
+        window.rHistory.goBack()
         return;
     }
     t.props.toBackAni();

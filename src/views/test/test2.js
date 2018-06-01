@@ -1,5 +1,7 @@
 import React,{Component} from 'react'
 
+import {Link} from 'react-router-dom'
+
 import Header from 'components/header'
 
 class Index extends Component{
@@ -20,9 +22,16 @@ class Index extends Component{
                 />
                 <div className="cm_main2">
                     <div className="cm_main">
-                        <ul className="cm_pc_12 cm_mt4 cm_tc">
-                            <li className="cm_pc_i cm_hl3 cm_c8b cm_cf cm_prl05 cm_br02">
-                                {this.state.title}
+                        <ul className="cm_pc_12 cm_mt4">
+                            <li className="cm_pc_12 cm_tc cm_mb05">
+                                <div className="cm_dib cm_hl3 cm_c8b cm_cf cm_prl05 cm_br02">
+                                    {this.state.title}
+                                </div>
+                            </li>
+                            <li className="cm_pc_12 cm_tc">
+                                <Link className="cm_dib cm_hl3 cm_c3b cm_cf cm_prl05 cm_br02" to="/login.html">
+                                    去登录
+                                </Link>
                             </li>
                         </ul>
                     </div>
