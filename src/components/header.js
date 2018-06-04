@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Index extends Component {
     constructor(props) {
@@ -37,8 +37,8 @@ class Index extends Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Index;
+export default Index

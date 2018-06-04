@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux';
-import { tsone } from 'actions/donate';
+import { connect } from 'react-redux'
+import { tsone } from 'actions/donate'
 
 import Beian from 'components/beian'
 import Header from 'components/header'
@@ -8,7 +8,7 @@ import Footer from 'views/common/footer'
 
 class Index extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             dnid:0,
             win: window.cm.updateAni(this.props.location.pathname, 'cm_Wr2l03'),
@@ -31,7 +31,7 @@ class Index extends Component {
     tsone(id) {
         this.setState({
             dnid: id
-        });
+        })
     }
     render() {
         const Hdata = { title: '捐赠我们', imgL: '', imgR: '' }
@@ -79,7 +79,7 @@ class Index extends Component {
                 <Beian />
                 <Footer path={this.props.location.pathname} />
             </div>
-        );
+        )
     }
 }
 
@@ -87,7 +87,7 @@ const mapStateToProps = (state) => {
     return {
         donate: state.donate
     }
-};
+}
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -95,7 +95,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(tsone(id))
         }
     }
-};
+}
 
-//export default Index;
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+//export default Index
+export default connect(mapStateToProps, mapDispatchToProps)(Index)

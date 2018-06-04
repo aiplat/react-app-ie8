@@ -6,7 +6,7 @@ import Footer from 'views/common/footer'
 
 class Index extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             win: window.cm.updateAni(this.props.location.pathname, 'cm_Wl2r03'),
             icon: require('assets/images/commons/metro_icon.png'),
@@ -38,13 +38,13 @@ class Index extends Component {
     }
     toDown(url) {
         if (!url) {
-            return;
+            return false
         }
         if (url == 'weixin://' && window.cm.isMob() == 0) {
-            window.alert('请在手机浏览器点击打开微信');
-            return;
+            window.alert('请在手机浏览器点击打开微信')
+            return false
         }
-        window.location = url;
+        window.location = url
     }
     render() {
         const Hdata = { title: '应用展示', imgL: '', imgR: '' }
@@ -88,8 +88,8 @@ class Index extends Component {
                 <Beian />
                 <Footer path={this.props.location.pathname} />
             </div>
-        );
+        )
     }
 }
 
-export default Index;
+export default Index

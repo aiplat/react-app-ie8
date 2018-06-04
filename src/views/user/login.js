@@ -7,19 +7,20 @@ class Index extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            win: window.cm.updateAni(1, ''),
-            title: '你当前没登录'
+            win: window.cm.updateAni(this, ''),
+            title: window.cm.getLS('index')?window.cm.getLS('index'):'你还没有登录哦'
         }
-    }
-    toLogin() {
-        window.cm.cl('Logining..')
-        this.props.ckLog(1, function () {
-            alert('登录成功')
-            window.rHistory.push('/test')
-        })
 
     }
+    toLogin() {
+        var t = this
+        this.props.ckLog(1, function () {
+            alert('登录成功')
+            t.props.history.replace('/test')
+        })
+    }
     render() {
+        console.log(this)
         const Hdata = { title: '登录', imgL: require('assets/images/commons/cm_back2.png'), imgR: '' }
         return (
             <div className={this.state.win.ani}>

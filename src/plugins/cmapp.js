@@ -13,6 +13,7 @@ cm.c = { 'author': 'womendi@qq.com', 'name': 'cmapp.js', 'txt': '公共JS', 'url
 cm.app = { 'url': cm.a.url, 'project': 'ai智能空间', 'name': 'ai智能空间', 'title': 'ai智能空间', 'keywords': 'ai智能空间,人工智能空间,aiplat,aiplat.com,AI,人工智能,智能空间,亲信地铁,亲信,地铁', 'description': 'ai智能空间,即将提供人工智能资讯,目标成为中国最大最全最专业的的人工智能资讯平台。' };
 cm.app.iswx = cm.c.ua.match(/MicroMessenger/i) == 'micromessenger' ? 1 : 0;
 cm.app.isapp = cm.c.ua.match(/html5plus/i) == 'html5plus' ? 1 : 0;
+//setLS getLS clearLS支持ie8
 cm.setLS = function (k, v, t) {
     var tp = t ? window.sessionStorage : window.localStorage;
     tp[k] = v;
@@ -381,19 +382,19 @@ cm.updateAni = (path, type) => {
 }
 cm.toBackAni = (t, type) => {
     if (type == 'noAni') {
-        window.rHistory.goBack()
+        window.history.go(-1)
         return;
     }
     t.setState({
         win: cm.updateAni(1, type ? type : 'cm_Wl2r03')
     });
     setTimeout(function () {
-        window.rHistory.goBack()
+        window.history.go(-1)
     }, 288)
 }
 cm.ckBackAni = (t) => {
     if (t.props.Hdata.bktype == 1) {
-        window.rHistory.goBack()
+        window.history.go(-1)
         return;
     }
     t.props.toBackAni();

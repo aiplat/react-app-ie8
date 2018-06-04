@@ -1,11 +1,11 @@
-import { GET_INFO_REQUEST, GET_INFO_SUCCESS, GET_INFO_FAIL } from 'actions/siteinfo';
+import { GET_INFO_REQUEST, GET_INFO_SUCCESS, GET_INFO_FAIL } from 'actions/siteinfo'
 
 const initState = {
     res: -2,
     isLoading: false,
     info: {},
     errorMsg: ''
-};
+}
 
 const updateState = (state, res, isLoading, info, errorMsg) => {
     return {
@@ -26,6 +26,6 @@ export default function reducer(state = initState, action) {
         case GET_INFO_FAIL:
             return updateState(state, 1, false, {}, '请求出错了,请重试')
         default:
-            return state;
+            return state
     }
 }

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Index extends Component {
     constructor(props) {
-        super(props);
+        super(props)
     }
     render() {
         const Len = 'cm_pc_' + this.props.MenuList.length + 'f'
-        const path = this.props.path;
+        const path = this.props.path
         return (
             <div className="cm_pf cm_bl0 cm_w100">
                 <div className="cm_main2">
@@ -35,8 +35,8 @@ class Index extends Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Index;
+export default Index

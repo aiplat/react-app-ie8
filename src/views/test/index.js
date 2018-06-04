@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Link} from 'react-router-dom'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import { getSiteInfo } from 'actions/siteinfo'
 
 import Header from 'components/header'
 
 class Index extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             win: window.cm.updateAni(1, 'cm_Wr2l04'),
             icon: window.site.logo,
@@ -38,35 +38,44 @@ class Index extends Component {
             }
         }
     }
-    /*
+
     componentWillMount() {
-        //window.cm.cl('-----------react生命周期-----------');
-        //window.cm.cl('componentWillMount');
+        window.cm.cl('-----------react生命周期-----------')
+        window.cm.cl('componentWillMount')
     }
     componentDidMount() {
-        //window.cm.cl('componentDidMount..');
-        //this.props.getSiteInfo();
+        window.cm.cl('componentDidMount..')
+        var t = this
+        t.props.getSiteInfo()
+        setTimeout(()=>{
+            if(t.props.siteinfo.res==0){
+                t.setState({
+                    indexData:t.props.siteinfo.info
+                })
+            }
+        },300)
     }
+    /*
     componentWillReceiveProps(newProps) {
-        //window.cm.cl('componentWillReceiveProps');
+        window.cm.cl('componentWillReceiveProps')
     }
     shouldComponentUpdate(newProps, newState) {
-        //window.cm.cl('shouldComponentUpdate');
-        return true;
+        window.cm.cl('shouldComponentUpdate')
+        return true
     }
     componentWillUpdate(nextProps, nextState) {
-        //window.cm.cl('componentWillUpdate');
+        window.cm.cl('componentWillUpdate')
     }
     componentDidUpdate(prevProps, prevState) {
-        //window.cm.cl('componentDidUpdate');
-    }
-    componentWillUnmount() {
-        //window.cm.cl('componentWillUnmount..');
-        //window.cm.cl('-----------react生命周期-----------');
+        window.cm.cl('componentDidUpdate')
     }
     */
+    componentWillUnmount() {
+        window.cm.cl('componentWillUnmount..')
+        window.cm.cl('-----------react生命周期-----------')
+    }
     toEmail() {
-        return 'mailto:' + this.state.indexData.email;
+        return 'mailto:' + this.state.indexData.email
     }
     render() {
         const m = this.props.match
@@ -74,7 +83,7 @@ class Index extends Component {
         return (
             <div className={this.state.win.ani}>
                 <Header Hdata={Hdata}
-                    toBackAni={() => window.cm.toBackAni(this,'cm_Wl2r03')}
+                    toBackAni={() => window.cm.toBackAni(this,'noAni')}
                 />
                 <div className="cm_main">
                     <ul className="cm_pc_12 cm_mt3 cm_mb6">
@@ -124,8 +133,8 @@ class Index extends Component {
                     </ul>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default connect((state) => ({ siteinfo: state.siteinfo }), { getSiteInfo })(Index);
+export default connect((state) => ({ siteinfo: state.siteinfo }), { getSiteInfo })(Index)

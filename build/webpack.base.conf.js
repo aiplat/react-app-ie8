@@ -11,7 +11,7 @@ const projectRoot = path.resolve(__dirname, dir)
 
 const baseConfig = {
     entry: {
-        app: [
+        main: [
             'es5-shim',
             'es5-shim/es5-sham',
             'babel-polyfill',
@@ -41,7 +41,7 @@ const baseConfig = {
             loader: 'json'
         }, {
             test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-            loader: 'url?limit=8192&name=images/[hash:10].[name].[ext]'
+            loader: 'url?limit=8192&name=img/[hash:10].[name].[ext]'
         }]
     },
     plugins: [

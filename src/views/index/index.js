@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { getSiteInfo } from 'actions/siteinfo';
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { getSiteInfo } from 'actions/siteinfo'
 
 import Beian from 'components/beian'
 import Header from 'components/header'
@@ -9,9 +9,12 @@ import Footer from 'views/common/footer'
 //可直接写less
 import 'assets/less/aiplat.less'
 
+import Axios from 'axios'
+
+
 class Index extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             win: window.cm.updateAni(this.props.location.pathname, 'cm_Wo2o03'),
             icon: window.site.logo,
@@ -43,13 +46,25 @@ class Index extends Component {
         }
     }
     componentWillMount() {
-        //window.cm.cl('componentWillMount');
+        window.cm.cl('componentWillMount')
+        window.cm.setLS('index','首页的localStorage')
+        Axios.get('/api/siteinfo.json', {
+            params: {
+                ID: 12345
+            }
+        })
+        .then(function (response) {
+            console.log(response)
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
     }
     componentWillUnmount() {
-        //window.cm.cl('componentWillUnmount..');
+        window.cm.cl('componentWillUnmount..')
     }
     toEmail() {
-        return 'mailto:' + this.state.indexData.email;
+        return 'mailto:' + this.state.indexData.email
     }
     render() {
         const Hdata = { title: '首页', imgL: '', imgR: '' }
@@ -105,8 +120,8 @@ class Index extends Component {
                 <Beian />
                 <Footer path={this.props.location.pathname} />
             </div>
-        );
+        )
     }
 }
 
-export default connect((state) => ({ siteinfo: state.siteinfo }), { getSiteInfo })(Index);
+export default connect((state) => ({ siteinfo: state.siteinfo }), { getSiteInfo })(Index)

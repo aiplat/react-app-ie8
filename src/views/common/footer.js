@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 import Footer from 'components/footer'
 
 
 class Index extends Component {
     constructor(props) {
-        super(props);
+        super(props)
     }
     MenuList = [
         { name: '首页', url: '/', img: require('assets/images/footer/sy_01.png'), imgOn: require('assets/images/footer/sy_01on.png') },
@@ -19,8 +19,8 @@ class Index extends Component {
                     path={this.props.path}
                 />
             </div>
-        );
+        )
     }
 }
 
-export default Index;
+export default Index
