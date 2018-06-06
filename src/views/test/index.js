@@ -88,7 +88,7 @@ class Index extends Component {
                 <div className="cm_main">
                     <ul className="cm_pc_12 cm_mt3 cm_mb6">
                         <li className="cm_pc_12 cm_mt05">
-                            <Link to="/a.html"><image className="cm_wh7 cm_bs100 cm_br305 cm_fc"
+                            <Link to="/a.html"><img  className="cm_wh7 cm_bs100 cm_br305 cm_fc"
                                 src={this.state.icon}
                                                /></Link>
                         </li>

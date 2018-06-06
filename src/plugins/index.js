@@ -1,4 +1,4 @@
-//全局jquery
+//全局jquery  (未使用) "jquery": "^1.11.1"
 //window.jQuery = window.$ = require('jquery/dist/jquery.min.js');
 
 import Axios from 'axios'

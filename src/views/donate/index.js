@@ -64,7 +64,7 @@ class Index extends Component {
                                     <div className={c3}
                                         key={k2}
                                     >
-                                        <image className="cm_h17 cm_bs100 cm_fc"
+                                        <img className="cm_h17 cm_bs100 cm_fc"
                                             src={v2.img}
                                         />
                                     </div>

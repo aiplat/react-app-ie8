@@ -7,6 +7,27 @@
 
 ---
 
+# 特别说明
+
+## 如果你想要兼容IE8或使用最新react，只需要在package.json中使用以下，package.json默认兼容IE8
+
+### 兼容IE8
+    "react": "0.x.x",
+    "react-dom": "0.x.x",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+
+### 使用最新react（不兼容IE8）
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
+
+---
+
 # 代码目录结构
 ### 习惯vue后，改为与vueapp类似(https://github.com/womendi/vueapp)
 
