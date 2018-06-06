@@ -1,5 +1,5 @@
 # react-app-ie8
- - react+redux+react-router+cmui+html5+css3+less+es6+webpack+兼容IE8
+ - react+redux+react-router+cmui+html5+css3+less+es6+webpack+axios+eslint+兼容IE8
  - 适合开发各种webapp、企业网站、后台管理系统等等任何系统
  - cmui仓库为https://github.com/womendi/cmui.git
  - 代码实例：ai智能空间react版  http://react.aiplat.com
