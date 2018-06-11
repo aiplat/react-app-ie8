@@ -66,7 +66,7 @@
 
 ### 最后看到以下这句 表示webpack编译成功
  - webpack: Compiled successfully.
- - 打开 http://本机ip:3008，方便手机在局域网访问
+ - 打开 http://本地ip:3008，方便手机在局域网访问
 
 # 打包项目
  - $ npm run build
