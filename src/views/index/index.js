@@ -32,13 +32,25 @@ class Index extends Component {
                     desc: '改写vue-cli的跨平台框架',
                     url: 'https://github.com/womendi/vueapp'
                 }, {
+                    name: 'react-app-ie8',
+                    desc: '改写react兼容IE8的跨平台框架',
+                    url: 'https://github.com/womendi/react-app-ie8'
+                }, {
+                    name: 'angular-app',
+                    desc: '改写angular-cli的跨平台框架',
+                    url: 'https://github.com/womendi/angular-app'
+                }, {
                     name: 'express-multipage',
                     desc: '改写express的多页面框架',
                     url: 'https://github.com/womendi/express-multipage'
                 }, {
-                    name: 'react-app-ie8',
-                    desc: '改写react兼容IE8的跨平台框架',
-                    url: 'https://github.com/womendi/react-app-ie8'
+                    name: 'nervjs-ie8',
+                    desc: '改写nervjs兼容IE8的多页面框架',
+                    url: 'https://github.com/womendi/nervjs-ie8'
+                }, {
+                    name: 'reactNative',
+                    desc: '改写reactNative的APP框架',
+                    url: 'https://github.com/womendi/reactNative'
                 }],
                 cooperation: '联系我',
                 email: 'womendi@qq.com'
