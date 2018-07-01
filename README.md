@@ -72,6 +72,10 @@
  - $ npm run build
  - 整个项目代码打包到dist目录,已启用Gzip压缩，打开其中index.html就是项目 首页
 
+# eslint 
+ - $ npm run eslint  (查看)
+ - $ npm run esfix  (fix)
+
 # 布署服务器(nginx) http://nginx.org/
  - 直接将npm run build后dist目录中文件放在服务器根目录
  - 若./src/main.js设置的是HashRouter，无需以下一条设置就可以正常运行网站

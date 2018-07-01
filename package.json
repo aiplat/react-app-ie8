@@ -7,7 +7,8 @@
     "dev": "webpack-dev-server --config build/dev.js --color --progress --watch --hot",
     "dev2": "webpack-dev-server --config build/dev.js --color --progress --watch --hot --inline",
     "build": "webpack --config build/build.js",
-    "eslint": "eslint --color --fix --ext .js ./"
+    "eslint": "eslint --color --ext .js ./",
+    "esfix": "eslint --color --fix --ext .js ./"
   },
   "keywords": [
     "react",
