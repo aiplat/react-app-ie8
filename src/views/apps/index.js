@@ -32,6 +32,26 @@ class Index extends Component {
                     arr: [
                         { name: '微信小程序-搜索‘娱乐计分器’', url: 'weixin://', market: '' }
                     ]
+                },
+                {
+                    name: 'AI智能空间',
+                    arr: [
+                        {
+                            name: '单页面vue版',
+                            url: 'http://www.aiplat.com',
+                            market: ''
+                        },
+                        {
+                            name: '单页面react版',
+                            url: 'http://react.aiplat.com',
+                            market: ''
+                        },
+                        {
+                            name: '多页面nervjs版',
+                            url: 'http://nerv.aiplat.com',
+                            market: ''
+                        }
+                    ]
                 }
             ]
         }
@@ -54,7 +74,7 @@ class Index extends Component {
                 <div className="cm_main">
                     <ul className="cm_pc_12 cm_mt3 cm_mb6">
                         <li className="cm_pc_12 cm_mt05 cm_tc">
-                            <img  className="cm_wh7 cm_bs100 cm_fc"
+                            <img className="cm_wh7 cm_bs100 cm_fc"
                                 src={this.state.icon}
                             />
                         </li>
