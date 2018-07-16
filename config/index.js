@@ -8,9 +8,9 @@ const path = require('path')
 const cm = require('../src/plugins/cmnode')
 
 var proxy = {
-    // 请求到 '/api' 下 的请求都会被代理到 target： http://www.aiplat.com 中
+    // 请求到 '/api' 下 的请求都会被代理到 target： http://aiplat.com 中
     '/api/*': {
-        target: 'http://www.aiplat.com',
+        target: 'http://aiplat.com',
         secure: false,
         changeOrigin: true
     }

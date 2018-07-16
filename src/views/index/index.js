@@ -40,6 +40,10 @@ class Index extends Component {
                     desc: '改写angular-cli的跨平台框架',
                     url: 'https://github.com/womendi/angular-app'
                 }, {
+                    name: 'wepy-app',
+                    desc: '改写wepy的小程序框架',
+                    url: 'https://github.com/womendi/wepy-app'
+                }, {
                     name: 'express-multipage',
                     desc: '改写express的多页面框架',
                     url: 'https://github.com/womendi/express-multipage'
@@ -59,18 +63,18 @@ class Index extends Component {
     }
     componentWillMount() {
         window.cm.cl('componentWillMount')
-        window.cm.setLS('index','首页的localStorage')
+        window.cm.setLS('index', '首页的localStorage')
         Axios.get('/api/siteinfo.json', {
             params: {
                 ID: 12345
             }
         })
-        .then(function (response) {
-            console.log(response)
-        })
-        .catch(function (error) {
-            console.log(error)
-        })
+            .then(function (response) {
+                console.log(response)
+            })
+            .catch(function (error) {
+                console.log(error)
+            })
     }
     componentWillUnmount() {
         window.cm.cl('componentWillUnmount..')
@@ -80,16 +84,16 @@ class Index extends Component {
     }
     render() {
         const Hdata = { title: '首页', imgL: '', imgR: '' }
-        const testUrl = {pathname:'/test',state:{id:1,type:2,value:3},query:{id:123456}}
+        const testUrl = { pathname: '/test', state: { id: 1, type: 2, value: 3 }, query: { id: 123456 } }
         return (
             <div className={this.state.win.ani}>
                 <Header Hdata={Hdata} />
                 <div className="cm_main">
                     <ul className="cm_pc_12 cm_mt3 cm_mb6">
                         <li className="cm_pc_12 cm_mt05">
-                            <Link to={testUrl}><img  className="cm_wh7 cm_bs100 cm_br305 cm_lessbr305 cm_fc"
+                            <Link to={testUrl}><img className="cm_wh7 cm_bs100 cm_br305 cm_lessbr305 cm_fc"
                                 src={this.state.icon}
-                                               /></Link>
+                            /></Link>
                         </li>
                         <li className="cm_pc_12 cm_be">
                             <div className="cm_pc_12 cm_pd05 cm_bf cm_lh105 cm_ti2 cm_mb05">{this.state.indexData.description}</div>
@@ -98,9 +102,9 @@ class Index extends Component {
                             <div className="cm_pc_12">
                                 <div className="cm_fl cm_prl05 cm_be cm_hl2 cm_mtb05 cm_br02">{this.state.indexData.gitName}</div>
                                 <div className="cm_pa cm_tr0 cm_hl3 cm_mr05">
-                                     <a href={this.state.indexData.gitUrl2}
-                                         target="_blank"
-                                     >{this.state.indexData.gitUrl}</a>
+                                    <a href={this.state.indexData.gitUrl2}
+                                        target="_blank"
+                                    >{this.state.indexData.gitUrl}</a>
                                 </div>
                             </div>
                             <div className="cm_pc_12 cm_pd05 cm_tc cm_be">
