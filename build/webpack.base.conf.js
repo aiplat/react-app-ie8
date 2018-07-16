@@ -20,8 +20,8 @@ const baseConfig = {
     },
     output: {
         path: path.join(__dirname, dir + 'dist'),
-        filename: 'js/[name].[chunkhash].js',
-        chunkFilename: 'js/[name].[chunkhash].js',
+        filename: 'static/js/[name].[chunkhash].js',
+        chunkFilename: 'static/js/[name].[chunkhash].js',
         publicPath: '/'
     },
     module: {
@@ -41,7 +41,7 @@ const baseConfig = {
             loader: 'json'
         }, {
             test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-            loader: 'url?limit=8192&name=img/[hash:10].[name].[ext]'
+            loader: 'url?limit=8192&name=static/img/[hash:10].[name].[ext]'
         }]
     },
     plugins: [

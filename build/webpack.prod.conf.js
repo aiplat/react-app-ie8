@@ -52,7 +52,7 @@ const prodConfig = {
                 'NODE_ENV': JSON.stringify(cm.build.env)
             }
         }),
-        new ExtractTextPlugin('css/[name].[contenthash:10].css')
+        new ExtractTextPlugin('static/css/[name].[contenthash:10].css')
     ]
 }
 
