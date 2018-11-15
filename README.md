@@ -2,7 +2,8 @@
  - react+redux+react-router+cmui+html5+css3+less+es6+webpack+axios+eslint+兼容IE8+自写的窗口动画
  - 适合开发各种webapp、企业网站、后台管理系统等等任何系统
  - cmui仓库为https://github.com/womendi/cmui.git
- - 结合hbuilder打包，可以直接做成全平台应用。例如 亲信地铁（vueapp） 腾讯应用宝或苹果appstore搜索‘亲信地铁’、web访问http://m.aiplat.com/metro
+ - 结合hbuilder打包，可以直接做成全平台应用。
+ 例如 亲信地铁（vueapp） 腾讯应用宝或苹果appstore搜索‘亲信地铁’、web访问http://m.aiplat.com/metro
 
 ---
 
