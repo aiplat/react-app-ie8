@@ -16,7 +16,6 @@
 
 
 # 特别说明
-
 ## 如果你想要兼容IE8或使用最新react，只需要在package.json中使用以下版本包，package.json默认兼容IE8
 
 ### 兼容IE8
