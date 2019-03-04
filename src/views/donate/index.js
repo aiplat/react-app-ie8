@@ -43,7 +43,7 @@ class Index extends Component {
                         <li className="cm_pc_12 cm_prl05 cm_lh105 cm_ti2 cm_mtb05">
                             <span className="">{this.state.indexData.desc}</span>
                         </li>
-                        <li className="cm_pc_12 cm_prl05 cm_tc cm_mb05">
+                        <li className="cm_pc_12 cm_prl05 cm_tc cm_mb05 cm_csp">
                             {this.state.indexData.dnarr.map((v, k) => {
                                 const c1 = this.props.donate.dnid == k ? 'cm_c1b cm_cf' : 'cm_be'
                                 const c2 = 'cm_pc_6 cm_hl2 ' + c1
